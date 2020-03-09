@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
+<!--Author: Miles Hollifield
+	Date:     3/8/2020
 	File:	  fixit1.php
 	Purpose:  What's wrong here? The code creates an Employee instance.
 			  then sets the ID and prints the ID.
@@ -17,6 +17,8 @@
 	<h1>WAGE REPORT</h1>
 
 	<?php
+  
+  include('inc-employee-object.php');
 
 	$emp1 = new Employee();
 

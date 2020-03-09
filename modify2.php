@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: Mike O'Kane
-		Date:	August, 2017
+<!--	Author: Miles Hollifield
+		Date:	3/8/2020
 		File:	modify2.php
 		Purpose: Chapter 15 Exercise
 		
@@ -38,9 +38,16 @@
 
 	$emp1 = new Employee();
 
-	$emp1->findEmployee($id);
-
-	print ("<p>Weekly Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getWeeklyPay()."</p>");
+	$result = $emp1->findEmployee($id);
+  
+  if($result == 1)
+  {
+    print ("<p>Weekly Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getWeeklyPay()."</p>");
+  }
+  else
+  {
+    print ("<p><em>Employee not found</em></p>");
+  }
 	?>
 
 </body>

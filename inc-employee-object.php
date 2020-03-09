@@ -39,7 +39,11 @@ class Employee
 			$empRecord = fgets($empFile);
 		}
 		fclose($empFile);
-
+    
+    if ($notFound == true)
+      return 0;
+    else
+      return 1;
 	}
 
 	public function getID()
@@ -96,6 +100,11 @@ class Employee
 	{
 		return number_format ((float)$this->hourlyWage * 40, 2);
 	}
+  
+  public function getAnnualPay()
+  {
+    return number_format ((float)$this->hourlyWage * 40 * 52);
+  }
 	
 } // end of class definition
 ?>
